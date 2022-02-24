@@ -13,12 +13,11 @@ export interface ThemeProviderProps {
 }
 
 export const ThemeProvider = ({ children, theme }: ThemeProviderProps) => {
-
   const themes: Record<ThemeOptions, Colors> = {
     light: lightTheme,
     dark: darkTheme,
   };
-  
+
   const colors = themes[theme];
 
   useLayoutEffect(() => {
